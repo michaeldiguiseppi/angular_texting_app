@@ -13,7 +13,7 @@
       <br />
       <div ng-controller="textController">
         <div class="row">
-          <div class="col-lg-4 col-lg-offset-4 col-xs-12 col-xs-offset-12">
+          <div class="col-lg-4 col-lg-offset-4 col-xs-12">
             <div class="alert alert-success" ng-if="success">
               {{ success }}
             </div>
@@ -22,26 +22,26 @@
         <br />
         <form class="form-horizontal" ng-submit="sendMessage(messageForm)" name="messageForm" novalidate>
           <div class="row">
-            <div class="col-lg-4 col-lg-offset-4 col-xs-12 col-xs-offset-12">
+            <div class="col-lg-4 col-lg-offset-4 col-xs-12">
               <input type="number" class="form-control" placeholder="Enter Phone Number without punctuation (5555555555)" ng-model="number" name="number" ng-minlength="10" required />
             </div>
           </div>
           <br />
           <div class="row">
-            <div class="col-lg-4 col-lg-offset-4 col-xs-12 col-xs-offset-12">
+            <div class="col-lg-4 col-lg-offset-4 col-xs-12">
               <input type="text" class="form-control" placeholder="Enter Message" ng-model="message" name="message" required ng-minlength="20"/>
             </div>
           </div>
           <br />
           <div class="row">
-            <div class="col-lg-4 col-lg-offset-4 col-xs-12 col-xs-offset-12">
+            <div class="col-lg-4 col-lg-offset-4 col-xs-12">
               <button type="submit" class="btn btn-lg btn-warning full-width">Send Message!</button>
             </div>
           </div>
         </form>
         <br />
         <div class="row">
-          <div class="col-lg-4 col-lg-offset-4 col-xs-12 col-xs-offset-12">
+          <div class="col-lg-4 col-lg-offset-4 col-xs-12">
             <div class="alert alert-danger" ng-messages="messageForm.number.$error" ng-show="messageForm.number.$error.required || messageForm.number.$error.minlength" multiple>
               <div ng-message="required">Phone number is required.</div>
               <div ng-message="minlength">Phone number must be 10 characters.</div>
@@ -49,7 +49,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-4 col-lg-offset-4 col-xs-12 col-xs-offset-12">
+          <div class="col-lg-4 col-lg-offset-4 col-xs-12">
             <div class="alert alert-danger" ng-messages="messageForm.message.$error" ng-show="messageForm.message.$error.required || messageForm.message.$error.minlength" multiple>
               <div ng-message="required">Message is required.</div>
               <div ng-message="minlength">Message must be 20 characters.</div>
