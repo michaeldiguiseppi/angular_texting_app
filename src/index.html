@@ -42,7 +42,7 @@
         <br />
         <div class="row">
           <div class="col-lg-4 col-lg-offset-4 col-xs-12">
-            <div class="alert alert-danger" ng-messages="messageForm.number.$error" ng-show="messageForm.number.$error.required || messageForm.number.$error.minlength" multiple>
+            <div class="alert alert-danger" ng-messages="messageForm.number.$error" ng-show="(messageForm.number.$error.required || messageForm.number.$error.minlength) && messageForm.number.$touched" multiple>
               <div ng-message="required">Phone number is required.</div>
               <div ng-message="minlength">Phone number must be 10 characters.</div>
             </div>
@@ -50,7 +50,7 @@
         </div>
         <div class="row">
           <div class="col-lg-4 col-lg-offset-4 col-xs-12">
-            <div class="alert alert-danger" ng-messages="messageForm.message.$error" ng-show="messageForm.message.$error.required || messageForm.message.$error.minlength" multiple>
+            <div class="alert alert-danger" ng-messages="messageForm.message.$error" ng-show="(messageForm.message.$error.required || messageForm.message.$error.minlength) && messageForm.message.$touched" multiple>
               <div ng-message="required">Message is required.</div>
               <div ng-message="minlength">Message must be 20 characters.</div>
             </div>
